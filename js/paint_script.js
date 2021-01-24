@@ -1,3 +1,4 @@
+//function for toggle the width of left toolbox
 function move_toolbox(){
     let toolbox=document.querySelector(".toolbox");
     let moveIcon=document.querySelector("#moveIcon");
@@ -13,8 +14,11 @@ function move_toolbox(){
     toolbox.classList.add('toolbox-maximize');
     toolbox.classList.remove('toolbox-minimize');    
 }
+//end toolbox functuin
+//code for testing canvs 
 var canvas = document.getElementById("paintcanvas");
 var ctx = canvas.getContext("2d");
 ctx.moveTo(0,0);
 ctx.lineTo(200,100);
 ctx.stroke();
+//end code
