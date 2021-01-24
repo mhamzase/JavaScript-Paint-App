@@ -22,3 +22,48 @@ ctx.moveTo(0,0);
 ctx.lineTo(200,100);
 ctx.stroke();
 //end code
+function changeTheme(){
+   let navBar=document.querySelector("#navbar");
+   let toolbox=document.querySelector(".toolbox");
+   let colorbar=document.querySelector(".colorbar");
+   let document_body=document.querySelector("body");
+   let toggleButton=document.querySelector("#modetoggle");
+   console.log(toolbox);
+   if(navBar.classList.contains("bg-light")){
+       navBar.classList.remove("bg-light");
+       navBar.classList.remove("navbar-light");
+       navBar.classList.add("bg-dark");
+       navBar.classList.add("navbar-dark");
+       toolbox.classList.remove("bg-light");
+       toolbox.classList.add("bg-dark");
+       toolbox.classList.add("text-white");
+       colorbar.classList.remove("bg-light");
+       colorbar.classList.add("bg-dark");
+       colorbar.classList.add("text-white");
+       document_body.classList.remove("body-bg-color-light");
+       document_body.classList.add("body-bg-color-dark");
+       toggleButton.classList.remove("fa-toggle-off");
+       toggleButton.classList.add("fa-toggle-on");
+       return;
+    }
+    console.log(navBar.classList.contains("bg-dark"));
+    if(navBar.classList.contains("bg-dark")){
+        navBar.classList.add("bg-light");
+        navBar.classList.add("navbar-light");
+        navBar.classList.remove("bg-dark");
+        navBar.classList.remove("navbar-dark");
+       toolbox.classList.add("bg-light");
+       toolbox.classList.remove("bg-dark");
+       toolbox.classList.remove("text-white");
+       colorbar.classList.add("bg-light");
+       colorbar.classList.remove("bg-dark");
+       colorbar.classList.remove("text-white");
+       document_body.classList.add("body-bg-color-light");
+       document_body.classList.remove("body-bg-color-dark");
+       toggleButton.classList.add("fa-toggle-off");
+       toggleButton.classList.remove("fa-toggle-on");
+       
+    }
+
+
+}

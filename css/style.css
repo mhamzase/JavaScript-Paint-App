@@ -4,16 +4,21 @@
 body{
       padding:0 !important;
       margin:0 !important;
+      
+}
+.body-bg-color-light{
       background-color: #fdfdfd;
 }
+.body-bg-color-dark{
+      background-color: #313131;
+}
 .toolbox{
-      background-color:#f8f9fa!important;
+      /* background-color:#f8f9fa; */
       float: left;
       height:82vh;
 }
 .colorbar{
       width:100%;
-      background-color:#f8f9fa;
       height:10vh;
 }
 .left-icon-desing{
@@ -42,4 +47,10 @@ body{
       margin-left: 20px;
       height: 79vh;
       margin-top: 10px;      
+}
+#modetoggle{
+      font-size: 2rem;
+    position: relative;
+    top: 5px;
+    right: 5px;
 }

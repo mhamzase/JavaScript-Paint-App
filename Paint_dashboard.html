@@ -10,10 +10,10 @@
 
     <title>JS Paint App</title>
   </head>
-  <body>
+  <body class="body-bg-color-light">
     <div class="">
            <div class="nav-bar">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
               <a class="navbar-brand" href="#"><img src="images/favicon.jpg" style="width: 30px;"> Paint App</a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -85,7 +85,11 @@
             <!-----end left list-->
            <!------right logotbtn list-->
                   <ul class="navbar-nav ml-auto">
-                    <button type="button" class="btn btn-danger">Logout</button>&nbsp; 
+                    <li class="nav-item"
+                    >
+                    <i class="fa fa-toggle-off" aria-hidden="true" id="modetoggle" onclick="changeTheme()"></i>
+                  </li>
+                    <button type="button" class="btn btn-danger" >Logout</button>&nbsp; 
                   </ul>
                   
               </div>
@@ -94,7 +98,7 @@
            </div>
 
           <!---left toolbox area-->
-           <div class="toolbox toolbox-maximize">
+           <div class="toolbox toolbox-maximize bg-light">
             <i class="fa fa-angle-double-left left-icon-desing" aria-hidden="true" onclick="move_toolbox()" id="moveIcon"></i>
           </div>
           <!---end left toolbox area-->
@@ -108,7 +112,7 @@
           </div>
           <!-------end paint_area-->
           <!----------Colorbar area-->
-          <div class="colorbar">
+          <div class="colorbar bg-light">
           </div>
           <!-------end colorbar area-->
     </div>
