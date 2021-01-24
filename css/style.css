@@ -1,5 +1,45 @@
 *{
-      padding:0;
-      margin:0;
       font-family: Montserrat;
+}
+body{
+      padding:0 !important;
+      margin:0 !important;
+      background-color: #fdfdfd;
+}
+.toolbox{
+      background-color:#f8f9fa!important;
+      float: left;
+      height:82vh;
+}
+.colorbar{
+      width:100%;
+      background-color:#f8f9fa;
+      height:10vh;
+}
+.left-icon-desing{
+      /* position: relative;
+      right: 0;
+      left: 85px;
+      top: 268px;
+       */
+       float:right;
+      cursor: pointer;
+}
+.toolbox-minimize{
+      transition: width 4s;
+      width:30px;
+}
+.toolbox-maximize{
+      transition: width 4s;     
+      width:100px;
+}
+.up-icon{
+      cursor: pointer;
+}
+#paintcanvas{
+      width:90%;
+      background-color:white;
+      margin-left: 20px;
+      height: 79vh;
+      margin-top: 10px;      
 }

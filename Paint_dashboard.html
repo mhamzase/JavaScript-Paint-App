@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="icon" href="images/favicon.jpg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>JS Paint App</title>
+  </head>
+  <body>
+    <div class="">
+           <div class="nav-bar">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <a class="navbar-brand" href="#"><img src="images/favicon.jpg" style="width: 30px;"> Paint App</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fa fa-file-text-o" aria-hidden="true"></i>&nbsp; File 
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="#"><i class="fa fa-plus-square-o" aria-hidden="true"></i>&nbsp;New</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-envelope-open-o" aria-hidden="true"></i>&nbsp;Open</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-floppy-o" aria-hidden="true"></i>&nbsp;Save</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-print" aria-hidden="true"></i>&nbsp;Print preview</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-cloud-upload" aria-hidden="true"></i>&nbsp;Load form url</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;Exit</a>
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbsp;Edit 
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="#"><i class="fa fa-undo" aria-hidden="true"></i>&nbsp;Undo</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-repeat" aria-hidden="true"></i>&nbsp;Redo</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-files-o" aria-hidden="true"></i>&nbsp;Copy</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-clipboard" aria-hidden="true"></i>&nbsp;Paste</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-th" aria-hidden="true"></i>&nbsp;Select all</a>
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fa fa-eye" aria-hidden="true"></i>&nbsp;  View 
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="#"><i class="fa fa-archive" aria-hidden="true"></i>&nbsp;Toolbox</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-paint-brush" aria-hidden="true"></i>&nbsp;Colorbox</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-bar-chart" aria-hidden="true"></i>&nbsp;Statusbar</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-search-plus" aria-hidden="true"></i>&nbsp;Zoom</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-compress" aria-hidden="true"></i>&nbsp;Full screen</a>
+                      
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fa fa-download" aria-hidden="true"></i>&nbsp; Export 
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="#"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp;Export PDF</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-file-image-o" aria-hidden="true"></i>&nbsp;Export PNG</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-file-image-o" aria-hidden="true"></i>&nbsp;Export JPG</a>          
+                    </div>
+                  </li>
+                 
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fa fa-question-circle" aria-hidden="true"></i>&nbsp; Help 
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="#"><i class="fa fa-info-circle" aria-hidden="true"></i>&nbsp;Help Topics</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-question" aria-hidden="true"></i>&nbsp;About paint</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-users" aria-hidden="true"></i>&nbsp;Developers</a>          
+                    </div>
+                  </li>
+                  
+                  </ul>
+                  <ul class="navbar-nav ml-auto">
+                    <button type="button" class="btn btn-danger">Logout</button>&nbsp; 
+                  </ul>
+                  
+              </div>
+            </nav>
+           </div>
+           <div class="toolbox toolbox-maximize">
+            <i class="fa fa-angle-double-left left-icon-desing" aria-hidden="true" onclick="move_toolbox()" id="moveIcon"></i>
+          </div>
+          <div class="text-center">          
+            <div class="row">
+            <div class="col-sm-12">
+              <canvas id="paintcanvas" ></canvas>
+            </div>
+          </div>
+          </div>
+          <div class="colorbar">
+      
+          </div>
+          
+    </div>
+    
+
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+      <script src="js/paint_script.js"></script>
+   
+  </body>
+</html>
+
+
