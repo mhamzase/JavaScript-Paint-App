@@ -81,3 +81,12 @@ body{
       padding-top: 8px;
       box-shadow: inset 1px 1px 10px 1px;
 }
+.white{
+      color:white;
+}
+.dakr{
+      color:black;
+}
+.dropdown-item:hover{
+      background-color:rgb(104, 94, 114);
+}

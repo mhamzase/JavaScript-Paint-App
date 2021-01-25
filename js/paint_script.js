@@ -1,8 +1,8 @@
+window.onload = function(){changeTheme();}
 let tools = document.querySelector(".tools");
 let shapes = document.querySelector(".shapes");
 let drawing = document.querySelector(".drawing");
 let erasing = document.querySelector(".erasing");
-
 let selectedTool = document.querySelector(".selectedTool");
 tools.classList.add("styleTools");
 
@@ -77,8 +77,6 @@ function move_toolbox(){
     toolbox.classList.add('toolbox-maximize');
     toolbox.classList.remove('toolbox-minimize');
     tools.style.display = "block";
-    
-
 }
 //end toolbox functuin
 //code for testing canvs 
@@ -88,14 +86,20 @@ var ctx = canvas.getContext("2d");
 // ctx.lineTo(200,100);
 // ctx.stroke();
 //end code
+function set_theme_mode(){
+    current_mode=localStorage.getItem('theme');
+    if(current_mode=='dark'){localStorage.setItem('theme','light');changeTheme();return;}
+    localStorage.setItem('theme','dark');
+    changeTheme();
+}
 function changeTheme(){
    let navBar=document.querySelector("#navbar");
    let toolbox=document.querySelector(".toolbox");
    let colorbar=document.querySelector(".colorbar");
    let document_body=document.querySelector("body");
    let toggleButton=document.querySelector("#modetoggle");
-   console.log(toolbox);
-   if(navBar.classList.contains("bg-light")){
+   let nav_bar=document.querySelector(".dropdown-menu");
+   if(localStorage.getItem('theme')=='dark'){
        navBar.classList.remove("bg-light");
        navBar.classList.remove("navbar-light");
        navBar.classList.add("bg-dark");
@@ -109,11 +113,12 @@ function changeTheme(){
        document_body.classList.remove("body-bg-color-light");
        document_body.classList.add("body-bg-color-dark");
        toggleButton.classList.remove("fa-toggle-off");
+       toggleButton.classList.add("white");
        toggleButton.classList.add("fa-toggle-on");
        return;
     }
     console.log(navBar.classList.contains("bg-dark"));
-    if(navBar.classList.contains("bg-dark")){
+    if(localStorage.getItem('theme')=='light'){
         navBar.classList.add("bg-light");
         navBar.classList.add("navbar-light");
         navBar.classList.remove("bg-dark");
@@ -127,12 +132,12 @@ function changeTheme(){
        document_body.classList.add("body-bg-color-light");
        document_body.classList.remove("body-bg-color-dark");
        toggleButton.classList.add("fa-toggle-off");
+       toggleButton.classList.remove("white");
        toggleButton.classList.remove("fa-toggle-on");
-       
     }
 
-
 }
+
 
 
 
