@@ -1,4 +1,14 @@
+window.close();
 window.onload = function(){changeTheme();}
+document.onclose=function(){
+    // if(confirm("Are you sure?")) return true;
+    // return false;
+    alert("hi");
+}
+function closeCurrentWindow() {
+    window.close();
+    
+  }
 let tools = document.querySelector(".tools");
 let shapes = document.querySelector(".shapes");
 let drawing = document.querySelector(".drawing");
@@ -86,18 +96,22 @@ function move_toolbox(){
     let toolbox=document.querySelector(".toolbox");
     let moveIcon=document.querySelector("#moveIcon");
     if(toolbox.classList.contains("toolbox-maximize")){
-    moveIcon.classList.remove("fa-angle-double-left");
-    moveIcon.classList.add("fa-angle-double-right");
+    moveIcon.classList.remove("bi-arrow-left-square-fill");
+    moveIcon.classList.add("bi-arrow-right-square-fill");
     toolbox.classList.remove('toolbox-maximize');
     toolbox.classList.add('toolbox-minimize');
     tools.style.display = "none";
-    return;
+    return false;
     }
-    moveIcon.classList.add("fa-angle-double-left");
-    moveIcon.classList.remove("fa-angle-double-right");
+    moveIcon.classList.add("bi-arrow-left-square-fill");
+    moveIcon.classList.remove("bi-arrow-right-square-fill");
     toolbox.classList.add('toolbox-maximize');
     toolbox.classList.remove('toolbox-minimize');
-    tools.style.display = "block";
+
+    setTimeout(function(){ 
+        tools.style.display = "block";
+     }, 1000);
+    
 }
 //end toolbox functuin
 //code for testing canvs 

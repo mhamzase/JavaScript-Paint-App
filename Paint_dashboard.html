@@ -15,7 +15,7 @@
     <div class="">
            <div class="nav-bar">
             <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
-              <a class="navbar-brand" href="#"><img src="images/favicon.jpg" style="width: 30px;"> Paint App</a>
+              <a class="navbar-brand" href="#"><img src="images/favicon.jpg" style="width: 30px;"><span class="color1">P</span><span class="color2">a</span><span class="color3">i</span><span class="color4">n</span><span class="color5">t</span> <span class="color6">A</span><span class="color7">p</span><span class="color8">p</span></a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -32,7 +32,7 @@
                       <a class="dropdown-item" href="#"><i class="fa fa-floppy-o" aria-hidden="true"></i>&nbsp;Save</a>
                       <a class="dropdown-item" href="#"><i class="fa fa-print" aria-hidden="true"></i>&nbsp;Print preview</a>
                       <a class="dropdown-item" href="#"><i class="fa fa-cloud-upload" aria-hidden="true"></i>&nbsp;Load form url</a>
-                      <a class="dropdown-item" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;Exit</a>
+                      <a class="dropdown-item" href="#"  onclick="closeCurrentWindow()"><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;Exit</a>
                     </div>
                   </li>
                   <li class="nav-item dropdown">
@@ -100,7 +100,7 @@
 
           <!---left toolbox area-->
            <div class="toolbox toolbox-maximize bg-light">
-            <i class="fa fa-angle-double-left left-icon-desing" aria-hidden="true" onclick="move_toolbox()" id="moveIcon"></i>
+            <i class="bi bi-arrow-left-square-fill left-icon-desing" aria-hidden="true" onclick="move_toolbox()" id="moveIcon"></i>
             <div class="tools">
               
               <small for="shapes" style="font-size: 15px;">Selected</small>

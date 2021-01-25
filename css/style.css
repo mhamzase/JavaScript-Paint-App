@@ -32,11 +32,11 @@ body{
       cursor: pointer;
 }
 .toolbox-minimize{
-      transition: width 2s;
+      transition: width 1s;
       width:30px;
 }
 .toolbox-maximize{
-      transition: width 2s;     
+      transition: width 1s;     
       width:100px;
 }
 .up-icon{
@@ -90,4 +90,49 @@ body{
 }
 #modetoggle{
 cursor: pointer;
+}
+ .color1{
+      color:#ef476f;
+      font-weight: bold;
+
+}
+
+.color2{
+      color:#ffd166;
+      font-weight: bold;
+      
+}
+
+.color3{
+      color:#06d6a0;
+      font-weight: bold;
+      
+}
+
+.color4{
+      color:#118ab2;
+      font-weight: bold;
+      
+}
+
+.color5{
+      color:#ff006e;
+      font-weight: bold;
+}
+.color6{
+      
+      color:#e09f3e;
+      font-weight: bold;
+}
+
+.color7{
+      
+      color:#43aa8b;
+      font-weight: bold;
+}
+
+.color8{
+      
+      color:#277da1;
+      font-weight: bold;
 }
