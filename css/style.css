@@ -31,18 +31,18 @@ body{
       cursor: pointer;
 }
 .toolbox-minimize{
-      transition: width 4s;
+      transition: width 2s;
       width:30px;
 }
 .toolbox-maximize{
-      transition: width 4s;     
+      transition: width 2s;     
       width:100px;
 }
 .up-icon{
       cursor: pointer;
 }
 #paintcanvas{
-      width:90%;
+      width:95%;
       background-color:white;
       margin-left: 20px;
       height: 79vh;
@@ -53,4 +53,31 @@ body{
     position: relative;
     top: 5px;
     right: 5px;
+}
+
+#moveIcon{
+      font-size: 30px;
+}
+
+.styleTools{
+      font-size: 30px;
+      position: relative;
+      left: 15px;
+      top: 25px;
+}
+.styleTools:hover{
+      cursor: pointer;
+}
+
+.styleTools i:hover{
+      color: rgb(174, 111, 226)
+}
+
+.selectedTool{
+      width: 70px;
+      height: 70px;
+      border: 2px solid rgb(61, 61, 61);
+      padding-left: 18px;
+      padding-top: 8px;
+      box-shadow: inset 1px 1px 10px 1px;
 }

@@ -1,3 +1,65 @@
+let tools = document.querySelector(".tools");
+let shapes = document.querySelector(".shapes");
+let drawing = document.querySelector(".drawing");
+let erasing = document.querySelector(".erasing");
+
+let selectedTool = document.querySelector(".selectedTool");
+tools.classList.add("styleTools");
+
+
+// shapes elements when click on it 
+for (let index = 1; index < shapes.children.length; index++) {
+    let element = shapes.children[index];
+    
+    element.addEventListener("click",function(){
+        let cloneElement = this.cloneNode(true);
+        if(selectedTool.hasChildNodes())
+        {   
+            selectedTool.removeChild(selectedTool.childNodes[0]);
+            selectedTool.appendChild(cloneElement);
+        }
+        else{
+            selectedTool.appendChild(cloneElement);
+        }  
+    });
+}
+
+
+// drawing elements when click on it 
+for (let index = 1; index < drawing.children.length; index++) {
+    let element = drawing.children[index];
+    
+    element.addEventListener("click",function(){
+        let cloneElement = this.cloneNode(true);
+        if(selectedTool.hasChildNodes())
+        {   
+            selectedTool.removeChild(selectedTool.childNodes[0]);
+            selectedTool.appendChild(cloneElement);
+        }
+        else{
+            selectedTool.appendChild(cloneElement);
+        }
+    });
+}
+
+
+// erasing elements when click on it 
+for (let index = 1; index < erasing.children.length; index++) {
+    let element = erasing.children[index];
+    
+    element.addEventListener("click",function(){
+        let cloneElement = this.cloneNode(true);
+        if(selectedTool.hasChildNodes())
+        {   
+            selectedTool.removeChild(selectedTool.childNodes[0]);
+            selectedTool.appendChild(cloneElement);
+        }
+        else{
+            selectedTool.appendChild(cloneElement);
+        }
+    });
+}
+
 //function for toggle the width of left toolbox
 function move_toolbox(){
     let toolbox=document.querySelector(".toolbox");
@@ -7,20 +69,24 @@ function move_toolbox(){
     moveIcon.classList.add("fa-angle-double-right");
     toolbox.classList.remove('toolbox-maximize');
     toolbox.classList.add('toolbox-minimize');
+    tools.style.display = "none";
     return;
     }
     moveIcon.classList.add("fa-angle-double-left");
     moveIcon.classList.remove("fa-angle-double-right");
     toolbox.classList.add('toolbox-maximize');
-    toolbox.classList.remove('toolbox-minimize');    
+    toolbox.classList.remove('toolbox-minimize');
+    tools.style.display = "block";
+    
+
 }
 //end toolbox functuin
 //code for testing canvs 
 var canvas = document.getElementById("paintcanvas");
 var ctx = canvas.getContext("2d");
-ctx.moveTo(0,0);
-ctx.lineTo(200,100);
-ctx.stroke();
+// ctx.moveTo(0,0);
+// ctx.lineTo(200,100);
+// ctx.stroke();
 //end code
 function changeTheme(){
    let navBar=document.querySelector("#navbar");
@@ -67,3 +133,6 @@ function changeTheme(){
 
 
 }
+
+
+
