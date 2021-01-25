@@ -124,13 +124,26 @@ function move_toolbox(){
 }
 //end toolbox functuin
 //code for testing canvs 
+var canvas = document.querySelector("#paintcanvas");
+    
 canvas.width=window.innerWidth;
 canvas.width=window.innerHeight;
 var ctx = canvas.getContext("2d");
-// ctx.moveTo(0,0);
-// ctx.lineTo(200,100);
-// ctx.stroke();
+ctx.fillStyle="rgba(200,0,0,0.1)";
+ctx.fillRect(300,20,100,50);
+ctx.fillStyle="rgba(100,200,0,0.1)";
+ctx.fillRect(350,50,100,50);
+
+ctx.fillStyle="rgba(100,200,20,0.8)";
+ctx.fillRect(30,30,100,50);
+ctx.moveTo(100,50);
+ctx.strokeStyle="rgba(100,200,20,0.8)";
+ctx.lineTo(200,100);
+ctx.stroke();
 //end code
+
+
+
 function set_theme_mode(){
     current_mode=localStorage.getItem('theme');
     if(current_mode=='dark'){localStorage.setItem('theme','light');changeTheme();return;}
@@ -212,6 +225,7 @@ function test(){
 }
 function enablefullscreen(){
     var element = document.querySelector("#paintcanvas");
+
 element.requestFullscreen()
 .then(function() {
 	
