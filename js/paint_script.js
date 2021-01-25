@@ -16,8 +16,11 @@ let erasing = document.querySelector(".erasing");
 let selectedTool = document.querySelector(".selectedTool");
 let nav_bar=Array.from(document.querySelectorAll(".dropdown-menu"));
 let nav_items=Array.from(document.querySelectorAll(".dropdown-item"));
+let color_all=Array.from(document.querySelectorAll(".col-sm-1"));
+var canvas = document.getElementById("paintcanvas");
 nav_items.forEach(add_mouseHoverEvenet);
 nav_items.forEach(add_mouseoOutEvenet);
+color_all.forEach(add_color_opacity);
 function add_mouseHoverEvenet(element){
     element.addEventListener('mouseover',function(){
         if(localStorage.getItem('theme')=='dark'){
@@ -33,6 +36,12 @@ function add_mouseHoverEvenet(element){
 function add_mouseoOutEvenet(element){
     element.addEventListener('mouseout',function(){
         this.style.backgroundColor="";
+    });
+}
+
+function add_color_opacity(element){
+    element.addEventListener('click',function(){
+        this.style.opacity="1";
     });
 }
 
@@ -115,7 +124,8 @@ function move_toolbox(){
 }
 //end toolbox functuin
 //code for testing canvs 
-var canvas = document.getElementById("paintcanvas");
+canvas.width=window.innerWidth;
+canvas.width=window.innerHeight;
 var ctx = canvas.getContext("2d");
 // ctx.moveTo(0,0);
 // ctx.lineTo(200,100);
@@ -189,6 +199,14 @@ function changeTheme(){
 $(function () {
     $('[data-toggle="tooltip"]').tooltip()
   })
+  $(function() {
+    $('#toggle-two').bootstrapToggle({
+      on: 'Enabled',
+      off: 'Disabled'
+    });
+  })
 //end
 
-
+function test(){
+    alert("hi");
+}
