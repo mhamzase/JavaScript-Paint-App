@@ -7,7 +7,8 @@ body{
       
 }
 .body-bg-color-light{
-      background-color: #fdfdfd;
+      /* background-color: #fdfdfd; */
+      background-color:whitesmoke;
 }
 .body-bg-color-dark{
       background-color: #313131;
@@ -87,6 +88,6 @@ body{
 .dakr{
       color:black;
 }
-.dropdown-item:hover{
-      background-color:rgb(104, 94, 114);
+#modetoggle{
+cursor: pointer;
 }

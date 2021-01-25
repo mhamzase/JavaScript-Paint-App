@@ -4,6 +4,28 @@ let shapes = document.querySelector(".shapes");
 let drawing = document.querySelector(".drawing");
 let erasing = document.querySelector(".erasing");
 let selectedTool = document.querySelector(".selectedTool");
+let nav_bar=Array.from(document.querySelectorAll(".dropdown-menu"));
+let nav_items=Array.from(document.querySelectorAll(".dropdown-item"));
+nav_items.forEach(add_mouseHoverEvenet);
+nav_items.forEach(add_mouseoOutEvenet);
+function add_mouseHoverEvenet(element){
+    element.addEventListener('mouseover',function(){
+        if(localStorage.getItem('theme')=='dark'){
+        this.style.backgroundColor="#252525";
+        return;
+    }
+    this.style.backgroundColor="#f8f9fa";
+    this.style.color="black";
+    
+        
+    });
+}
+function add_mouseoOutEvenet(element){
+    element.addEventListener('mouseout',function(){
+        this.style.backgroundColor="";
+    });
+}
+
 tools.classList.add("styleTools");
 
 
@@ -25,6 +47,7 @@ for (let index = 1; index < shapes.children.length; index++) {
 }
 
 
+
 // drawing elements when click on it 
 for (let index = 1; index < drawing.children.length; index++) {
     let element = drawing.children[index];
@@ -41,8 +64,6 @@ for (let index = 1; index < drawing.children.length; index++) {
         }
     });
 }
-
-
 // erasing elements when click on it 
 for (let index = 1; index < erasing.children.length; index++) {
     let element = erasing.children[index];
@@ -98,7 +119,6 @@ function changeTheme(){
    let colorbar=document.querySelector(".colorbar");
    let document_body=document.querySelector("body");
    let toggleButton=document.querySelector("#modetoggle");
-   let nav_bar=document.querySelector(".dropdown-menu");
    if(localStorage.getItem('theme')=='dark'){
        navBar.classList.remove("bg-light");
        navBar.classList.remove("navbar-light");
@@ -115,9 +135,14 @@ function changeTheme(){
        toggleButton.classList.remove("fa-toggle-off");
        toggleButton.classList.add("white");
        toggleButton.classList.add("fa-toggle-on");
+       for(let index=0;index<nav_bar.length;index++){
+        nav_bar[index].classList.add('bg-dark');
+          }
+        for(let index=0;index<nav_items.length;index++){
+            nav_items[index].classList.add('text-white');
+            }
        return;
     }
-    console.log(navBar.classList.contains("bg-dark"));
     if(localStorage.getItem('theme')=='light'){
         navBar.classList.add("bg-light");
         navBar.classList.add("navbar-light");
@@ -134,10 +159,22 @@ function changeTheme(){
        toggleButton.classList.add("fa-toggle-off");
        toggleButton.classList.remove("white");
        toggleButton.classList.remove("fa-toggle-on");
+       for(let index=0;index<nav_bar.length;index++){
+        nav_bar[index].classList.remove('bg-dark');
+        
+    }
+    for(let index=0;index<nav_items.length;index++){
+        nav_items[index].classList.remove('text-white');
+       
+        }
+  
     }
 
 }
-
-
+//for bootstrap4 tooltip
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+//end
 
 
