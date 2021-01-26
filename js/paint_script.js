@@ -163,7 +163,7 @@ function changeTheme(){
    let document_body=document.querySelector("body");
    let toggleButton=document.querySelector("#modetoggle");
    let diloagbtn=document.querySelector(".dialog-bnt");
-
+   let infoDaliobox=document.querySelector("#infodd");
    let modal=document.querySelector(".modal-content");
    if(localStorage.getItem('theme')=='dark'){
        navBar.classList.remove("bg-light");
@@ -186,6 +186,8 @@ function changeTheme(){
        diloagbtn.classList.remove("btn-primary");
        diloagbtn.classList.add("huge-black");
        diloagbtn.classList.add('text-white');
+       infoDaliobox.classList.add("bg-dark");
+       infoDaliobox.classList.add("text-white");
 
 
        for(let index=0;index<nav_bar.length;index++){
@@ -217,6 +219,9 @@ function changeTheme(){
        diloagbtn.classList.add("btn-primary");
        diloagbtn.classList.remove("huge-black");
        diloagbtn.classList.remove('text-white');
+       infoDaliobox.classList.remove("bg-dark");
+       infoDaliobox.classList.remove("text-white");
+       
        
        for(let index=0;index<nav_bar.length;index++){
         nav_bar[index].classList.remove('bg-dark');

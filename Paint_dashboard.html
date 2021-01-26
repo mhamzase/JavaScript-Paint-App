@@ -10,6 +10,7 @@
     <!-- bootstrap 4.6 icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/colors.css">
 
     <title>JS Paint App</title>
   </head>
@@ -80,9 +81,9 @@
                       <i class="fa fa-question-circle" aria-hidden="true"></i>&nbsp; Help 
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <a class="dropdown-item" href="#"><i class="fa fa-info-circle" aria-hidden="true"></i>&nbsp;Help Topics</a>
-                      <a class="dropdown-item" href="#"><i class="fa fa-question" aria-hidden="true"></i>&nbsp;About paint</a>
-                      <a class="dropdown-item" href="#"><i class="fa fa-users" aria-hidden="true"></i>&nbsp;Developers</a>          
+                      <a class="dropdown-item" href="#" onclick="user_guide_window()"><i class="fa fa-info-circle" aria-hidden="true"></i>&nbsp;Help Topics</a>
+                      <a class="dropdown-item" href="#" data-toggle="modal" data-target="#aboutModal"><i class="fa fa-question" aria-hidden="true"></i>&nbsp;About paint</a>
+                      <a class="dropdown-item" href="Developers_info.html" target="_blank"   ><i class="fa fa-users" aria-hidden="true"></i>&nbsp;Developers</a>          
                     </div>
                   </li>
                   
@@ -201,6 +202,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
     <script src="js/window_functions.js"></script>
     <script src="js/dowload_functions.js"></script>
+    <script src="js/user_help.js"></script>
+    <script src="js/"
     <script src="js/p5.js"></script>
     
     <script src="js/PaintSurface_evenets.js"></script>
@@ -237,3 +240,38 @@
     </div>
   </div>
 </div>
+<!------end downlaod_options modal-->
+<div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content" id="infodd">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">About Paint</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        This is a paint app develop for ease of developing painting using the web.
+        This app provides you basic and some advanced features like you can make 
+        drawings save and download them. You can export your drawing in PNG, JPG 
+        and you can also download your drawing in PDF format appearance also customizable
+          support both dark and light theme. You can open your drawing and pictures through
+          URL can also upload files.
+          
+        <!-- <center>
+       
+      </center>
+       -->
+      <!-- <p class="info">        
+        
+      </p>
+       -->
+
+    </div>
+    </div>
+  </div>
+</div>
+
+<!---------end about paint app modal-->
+
+
