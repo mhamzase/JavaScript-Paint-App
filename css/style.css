@@ -4,6 +4,7 @@
 body{
       padding:0 !important;
       margin:0 !important;
+      overflow:hidden;
       
 }
 .body-bg-color-light{
@@ -47,7 +48,8 @@ body{
       background-color:white;
       margin-left: 20px;
       height: 79vh;
-      margin-top: 10px;      
+      margin-top: 10px;  
+      position: relative;    
 }
 #modetoggle{
       font-size: 2rem;
@@ -210,4 +212,19 @@ input[type="color"]:hover{
       background-color: rgb(228, 227, 227);
       padding:10px;
       color:black!important;
+}
+#zoom-area{
+      display: inline;
+      position: relative;
+      left:60px;
+      top:2px;
+
+}
+#zoomrange{
+      cursor: pointer;
+}
+.cordinates_continaer{
+      display:inline;
+      position: relative;
+      left:50px;
 }

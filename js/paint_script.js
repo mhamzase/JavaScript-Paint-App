@@ -20,6 +20,7 @@ let color_all=Array.from(document.querySelectorAll(".col-sm-1"));
 var canvas = document.getElementById("paintcanvas");
 let place_x=document.querySelector("#co-X");
 let place_Y=document.querySelector("#co-Y");
+let zoom_value=document.querySelector("#zoomrange");
 nav_items.forEach(add_mouseHoverEvenet);
 nav_items.forEach(add_mouseoOutEvenet);
 color_all.forEach(add_color_opacity);
@@ -248,5 +249,29 @@ function draw_painting(event){
 function reset_coutn(event){
     place_x.innerText=0;
     place_Y.innerText=0;
+    
+}
+
+
+previous_width=95;
+current_value_zoom=0;
+function zoom_paint_area(){
+    let zoom_count=document.querySelector("#current_value");
+    zoom_count.innerText=zoom_value.value;
+    if(current_value_zoom<parseInt(zoom_value.value)){
+        next_Width=previous_width+parseInt(zoom_value.value);
+        canvas.style.width =`${next_Width}%`;
+        previous_width=next_Width;
+        current_value_zoom=parseInt(zoom_value.value);
+        return;
+    }
+    next_Width=previous_width-parseInt(zoom_value.value);
+    canvas.style.width =`${next_Width}%`;
+    previous_width=next_Width;
+    current_value_zoom=parseInt(zoom_value.value);
+    if(parseInt(zoom_value.value)==0){
+        canvas.style.width ='95%';
+        current_value_zoom=0;
+    }
     
 }
