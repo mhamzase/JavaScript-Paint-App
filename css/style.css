@@ -139,8 +139,7 @@ cursor: pointer;
 .colors{
       position: relative;
       top:20px;
-      
-      
+      float: left;
       width: 500px;
       
 }
@@ -199,4 +198,16 @@ input[type="color"]{
 }
 input[type="color"]:hover{
       opacity: 1;
+}
+.footer-right-container{
+      float:right;
+      position: relative;
+      right:100px;
+      top:30px;
+}
+
+.cordinates{
+      background-color: rgb(228, 227, 227);
+      padding:10px;
+      color:black!important;
 }

@@ -1,4 +1,4 @@
-window.close();
+
 window.onload = function(){changeTheme();}
 document.onclose=function(){
     // if(confirm("Are you sure?")) return true;
@@ -18,6 +18,8 @@ let nav_bar=Array.from(document.querySelectorAll(".dropdown-menu"));
 let nav_items=Array.from(document.querySelectorAll(".dropdown-item"));
 let color_all=Array.from(document.querySelectorAll(".col-sm-1"));
 var canvas = document.getElementById("paintcanvas");
+let place_x=document.querySelector("#co-X");
+let place_Y=document.querySelector("#co-Y");
 nav_items.forEach(add_mouseHoverEvenet);
 nav_items.forEach(add_mouseoOutEvenet);
 color_all.forEach(add_color_opacity);
@@ -235,5 +237,16 @@ element.requestFullscreen()
 	console.log(error.message);
 });
 
+}
 
+function draw_painting(event){
+    let x=event.clientX;
+    let y=event.clientY;
+    place_x.innerText = x;
+    place_Y.innerText=y;
+}
+function reset_coutn(event){
+    place_x.innerText=0;
+    place_Y.innerText=0;
+    
 }
