@@ -246,3 +246,17 @@ input[type="color"]:hover{
       
       scrollbar-width: thin;
 }
+#downloadModal{
+      margin-top:180px;
+
+}
+#downloadModal button{
+      position: relative;
+      top:5px;
+}
+.modal-content{
+      
+}
+.huge-black{
+      background-color:#1d2023;
+}

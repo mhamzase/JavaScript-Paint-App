@@ -132,13 +132,16 @@ var canvas = document.querySelector("#paintcanvas");
 canvas.width=window.innerWidth;
 canvas.width=window.innerHeight;
 var ctx = canvas.getContext("2d");
-ctx.fillStyle="rgba(200,0,0,0.1)";
-ctx.fillRect(300,20,100,50);
-ctx.fillStyle="rgba(100,200,0,0.1)";
-ctx.fillRect(350,50,100,50);
+ctx.fillStyle = 'white';
+ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+ctx.fillStyle="black";
+ctx.fillRect(200,20,400,200);
+ctx.fillStyle="rgba(100,200,0,1)";
+ctx.fillRect(500,300,100,150);
 
 ctx.fillStyle="rgba(100,200,20,0.8)";
-ctx.fillRect(30,30,100,50);
+ctx.fillRect(30,30,100,400);
 ctx.moveTo(100,50);
 ctx.strokeStyle="rgba(100,200,20,0.8)";
 ctx.lineTo(200,100);
@@ -159,6 +162,9 @@ function changeTheme(){
    let colorbar=document.querySelector(".colorbar");
    let document_body=document.querySelector("body");
    let toggleButton=document.querySelector("#modetoggle");
+   let diloagbtn=document.querySelector(".dialog-bnt");
+
+   let modal=document.querySelector(".modal-content");
    if(localStorage.getItem('theme')=='dark'){
        navBar.classList.remove("bg-light");
        navBar.classList.remove("navbar-light");
@@ -175,6 +181,13 @@ function changeTheme(){
        toggleButton.classList.remove("fa-toggle-off");
        toggleButton.classList.add("white");
        toggleButton.classList.add("fa-toggle-on");
+       modal.classList.add("bg-dark");
+       modal.classList.add("text-white");
+       diloagbtn.classList.remove("btn-primary");
+       diloagbtn.classList.add("huge-black");
+       diloagbtn.classList.add('text-white');
+
+
        for(let index=0;index<nav_bar.length;index++){
         nav_bar[index].classList.add('bg-dark');
           }
@@ -199,6 +212,12 @@ function changeTheme(){
        toggleButton.classList.add("fa-toggle-off");
        toggleButton.classList.remove("white");
        toggleButton.classList.remove("fa-toggle-on");
+       modal.classList.remove("bg-dark");
+       modal.classList.remove("text-white");
+       diloagbtn.classList.add("btn-primary");
+       diloagbtn.classList.remove("huge-black");
+       diloagbtn.classList.remove('text-white');
+       
        for(let index=0;index<nav_bar.length;index++){
         nav_bar[index].classList.remove('bg-dark');
         
