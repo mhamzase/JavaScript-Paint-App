@@ -34,7 +34,7 @@
                       <a href="" class="dropdown-item"  data-toggle="modal" data-target="#downloadModal"><i class="fa fa-floppy-o" aria-hidden="true"></i>&nbsp;Save</a>
               
                     
-                      <a class="dropdown-item" href="#"><i class="fa fa-print" aria-hidden="true"></i>&nbsp;Print preview</a>
+                      <a class="dropdown-item" href="#" onclick="print_drwing()"><i class="fa fa-print" aria-hidden="true"></i>&nbsp;Print preview</a>
                       <a class="dropdown-item" href="#"><i class="fa fa-cloud-upload" aria-hidden="true"></i>&nbsp;Load form url</a>
                       <a class="dropdown-item" href="#"  onclick="closeCurrentWindow()"><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;Exit</a>
                     </div>
@@ -69,9 +69,9 @@
                       <i class="fa fa-download" aria-hidden="true"></i>&nbsp; Export 
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <a class="dropdown-item" href="#"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp;Export PDF</a>
-                      <a class="dropdown-item" href="#"><i class="fa fa-file-image-o" aria-hidden="true"></i>&nbsp;Export PNG</a>
-                      <a class="dropdown-item" href="#"><i class="fa fa-file-image-o" aria-hidden="true"></i>&nbsp;Export JPG</a>          
+                      <a class="dropdown-item" href="#" onclick="download_as_pdf()"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp;Export PDF</a>
+                      <a class="dropdown-item" href="#" onclick="download_as_png()"><i class="fa fa-file-image-o" aria-hidden="true"></i>&nbsp;Export PNG</a>
+                      <a class="dropdown-item" href="#" onclick="download_as_jpg()"><i class="fa fa-file-image-o" aria-hidden="true"></i>&nbsp;Export JPG</a>          
                     </div>
                   </li>
                  
@@ -199,6 +199,8 @@
     <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+    <script src="js/window_functions.js"></script>
+    <script src="js/dowload_functions.js"></script>
     <script src="js/p5.js"></script>
     
     <script src="js/PaintSurface_evenets.js"></script>
