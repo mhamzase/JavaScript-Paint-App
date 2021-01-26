@@ -4,7 +4,8 @@
 body{
       padding:0 !important;
       margin:0 !important;
-      overflow:hidden;
+       overflow:hidden;
+       
       
 }
 .body-bg-color-light{
@@ -140,7 +141,7 @@ cursor: pointer;
 }
 .colors{
       position: relative;
-      top:20px;
+      top:7px;
       float: left;
       width: 500px;
       
@@ -205,7 +206,7 @@ input[type="color"]:hover{
       float:right;
       position: relative;
       right:100px;
-      top:30px;
+      top:10px;
 }
 
 .cordinates{
@@ -220,6 +221,18 @@ input[type="color"]:hover{
       top:2px;
 
 }
+.paint-container::-webkit-scrollbar-track {
+      background: rgb(58, 58, 57);        /* color of the tracking area */
+    }
+    
+.paint-container::-webkit-scrollbar {
+      width:1px;
+}
+.paint-container::-webkit-scrollbar-thumb{
+      background-color:white;
+      
+}
+
 #zoomrange{
       cursor: pointer;
 }
@@ -227,4 +240,8 @@ input[type="color"]:hover{
       display:inline;
       position: relative;
       left:50px;
+}
+.paint-container{
+      overflow-X: scroll;
+      scrollbar-width: thin;
 }
