@@ -257,12 +257,15 @@ previous_width=95;
 current_value_zoom=0;
 function zoom_paint_area(){
     let zoom_count=document.querySelector("#current_value");
+    let scrollbar_container=document.querySelector(".paint-container");
     zoom_count.innerText=zoom_value.value;
     if(current_value_zoom<parseInt(zoom_value.value)){
         next_Width=previous_width+parseInt(zoom_value.value);
         canvas.style.width =`${next_Width}%`;
         previous_width=next_Width;
         current_value_zoom=parseInt(zoom_value.value);
+        scrollbar_container.style.overflowX ="scroll";
+
         return;
     }
     next_Width=previous_width-parseInt(zoom_value.value);
@@ -272,6 +275,7 @@ function zoom_paint_area(){
     if(parseInt(zoom_value.value)==0){
         canvas.style.width ='95%';
         current_value_zoom=0;
+        scrollbar_container.style.overflowX ="hidden";
     }
     
 }

@@ -227,6 +227,7 @@ input[type="color"]:hover{
     
 .paint-container::-webkit-scrollbar {
       width:1px;
+      cursor: pointer;
 }
 .paint-container::-webkit-scrollbar-thumb{
       background-color:white;
@@ -242,6 +243,6 @@ input[type="color"]:hover{
       left:50px;
 }
 .paint-container{
-      overflow-X: scroll;
+      
       scrollbar-width: thin;
 }
