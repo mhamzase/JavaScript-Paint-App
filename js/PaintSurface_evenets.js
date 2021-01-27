@@ -19,8 +19,9 @@ function clear_surface(){
                 a.download="untitle.png";
                 a.click();
                 document.body.removeChild("a");
+                paint_areas.clearRect(0,0,canvas_container.width,canvas_container.height);
             }
-            paint_areas.clearRect(0,0,canvas_container.width,canvas_container.height);
+            
 
         }
       })

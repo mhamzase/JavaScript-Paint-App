@@ -5,3 +5,11 @@ function print_drwing(){
     toolbox.style.display="block";
 }
 
+function enablefullscreen(){
+    var element = document.querySelector("#paintcanvas");
+
+element.requestFullscreen().then(function(){}).catch(function(error) {
+	console.log(error.message);
+});
+
+}

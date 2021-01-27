@@ -250,19 +250,7 @@ $(function () {
 function test(){
     alert("hi");
 }
-function enablefullscreen(){
-    var element = document.querySelector("#paintcanvas");
 
-element.requestFullscreen()
-.then(function() {
-	
-})
-.catch(function(error) {
-	
-	console.log(error.message);
-});
-
-}
 
 function draw_painting(event){
     let x=event.clientX;
