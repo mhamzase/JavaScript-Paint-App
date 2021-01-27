@@ -13,3 +13,8 @@ element.requestFullscreen().then(function(){}).catch(function(error) {
 });
 
 }
+
+function closeCurrentWindow() {
+    window.close();
+    
+  }

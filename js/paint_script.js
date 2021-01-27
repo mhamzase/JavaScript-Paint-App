@@ -5,10 +5,7 @@ document.onclose=function(){
     // return false;
     alert("hi");
 }
-function closeCurrentWindow() {
-    window.close();
-    
-  }
+
 let tools = document.querySelector(".tools");
 let shapes = document.querySelector(".shapes");
 let drawing = document.querySelector(".drawing");
