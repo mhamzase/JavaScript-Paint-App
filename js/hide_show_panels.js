@@ -59,5 +59,5 @@ function FooterArea(){
       }
       footerSide.style.display = "block";
       colorbar_dropdown.childNodes[2].style.display = "inline";
-      canvasArea.style.height = "82vh";
+      canvasArea.style.height = "79vh";
 }     
