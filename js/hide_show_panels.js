@@ -1,21 +1,28 @@
-localStorage.setItem("viewToolbarCheck","appear");
+
+
+function changeAppearance(){
+      let appearanceMode = localStorage.getItem("viewToolbarCheck");
+      if(appearanceMode == "appear")
+      {
+            localStorage.setItem("viewToolbarCheck","disappear");
+            toolBoxArea();
+            return;
+      }
+      localStorage.setItem("viewToolbarCheck","appear");
+      toolBoxArea();
+}
+
 
 function toolBoxArea(){
       let toolbar_dropdown = document.getElementById("view-toolbar-dropdown");
-      let tools = document.querySelector(".tools");
+      let toolSide = document.querySelector(".toolbox");
       
-      if(localStorage.getItem("viewToolbarCheck") == "appear")
-      {
-            localStorage.setItem("viewToolbarCheck","disappear");
-            tools.style.display = "none"
-            toolbar_dropdown.childNodes[2].style.display = "none";
-            return;
-      }
       if(localStorage.getItem("viewToolbarCheck") == "disappear")
       {
-            localStorage.setItem("viewToolbarCheck","appear");
-            tools.style.display = "block"
-            toolbar_dropdown.childNodes[2].style.display = "inline";
+            toolSide.style.display = "none";
+            toolbar_dropdown.childNodes[2].style.display = "none";
+            return false;
       }
-      
+      toolSide.style.display = "block";
+      toolbar_dropdown.childNodes[2].style.display = "inline";
 }     
