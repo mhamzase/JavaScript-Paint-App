@@ -50,46 +50,45 @@
     width: 500px;
     
 }
-.pickcolor1{
-          background-color:#240046;
-}
 .col-sm-1{
-    width:1px;
+    width:0.5px;
     display:inline-block;
     padding-right:30px;     
-    height:40px;
+    height:30px;
     cursor:pointer;
     transition:  1s;
-    opacity: 0.3;
 }
 .col-sm-1:hover{
     opacity:1;
     box-shadow:5px 5px 5px 5px back;
 }
+.pickcolor1{
+    background-color:#be0000;
+}
 .pickcolor2{
-    background-color:#002642;
+    background-color:#000000;
 }
 .pickcolor3{
-    background-color:#9a031e;
+    background-color:#00268d;
 }
 .pickcolor4{
-    background-color:#03045e;
+    background-color:#006e18;
 }
 .pickcolor5{
-    background-color:#ff8800;
+    background-color:#ecfd00;
 }
 .pickcolor6{
-    background-color:#006400;
+    background-color:#00f7ff;
 }
 .pickcolor7{
-    background-color:#b2c9ab;
+    background-color:#fa8e00;
 }
 .pickcolor8{
-    background-color:#5e3023;
+    background-color:#3200e9;
 }
 .pickcolor9{
-    background-color:#97d2fb;
+    background-color:#cc00ff;
 }
 .pickcolor10{
-    background-color:#540d6e;
+    background-color:#ffffff;
 }
