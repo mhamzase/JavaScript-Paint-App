@@ -15,6 +15,9 @@ element.requestFullscreen().then(function(){}).catch(function(error) {
 }
 
 function closeCurrentWindow() {
-    window.close();
+    if(confirm("Do you want to exit Paint App?"))
+    {
+        window.close();
+    }
     
   }
