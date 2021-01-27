@@ -1,5 +1,5 @@
 
-window.onload = function(){changeTheme();toolBoxArea();}
+window.onload = function(){changeTheme();toolBoxArea();FooterArea();}
 document.onclose=function(){
     // if(confirm("Are you sure?")) return true;
     // return false;
