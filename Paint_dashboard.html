@@ -57,7 +57,7 @@
                       <i class="fa fa-eye" aria-hidden="true"></i>&nbsp;  View 
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <a class="dropdown-item" href="" onclick="toolBoxArea()"><i class="fa fa-archive" aria-hidden="true"></i>&nbsp;Toolbox&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-check text-right"></i></a>
+                      <a class="dropdown-item"  onclick="toolBoxArea()" id="view-toolbar-dropdown"><i class="fa fa-archive" aria-hidden="true"></i>&nbsp;Toolbox&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-check"></i></a>
                       <a class="dropdown-item" href=""><i class="fa fa-paint-brush" aria-hidden="true"></i>&nbsp;Colorbox&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-check"></i></a>
                       <a class="dropdown-item" href=""><i class="fa fa-search-plus" aria-hidden="true"></i>&nbsp;Zoom</a>
                       <a class="dropdown-item" href="" onclick="enablefullscreen()"><i class="fa fa-compress" aria-hidden="true" ></i>&nbsp;Full screen</a>
@@ -142,7 +142,8 @@
           <div class="text-center">          
             <div class="row">
             <div class="col-sm-12 paint-container">
-              <canvas id="paintcanvas" onmousemove="draw_painting(event)"  onmouseout="reset_coutn(event)" width=800 height=800></canvas>
+              <!-- onmousemove="draw_painting(event)" -->
+              <canvas id="paintcanvas"  onmouseout="reset_coutn(event)" width=800 height=800></canvas>
             </div>
           </div>
           </div>
@@ -202,8 +203,8 @@
     <script src="js/window_functions.js"></script>
     <script src="js/dowload_functions.js"></script>
     <script src="js/user_help.js"></script>
-    <script src="js/"
     <script src="js/p5.js"></script>
+    <script src="js/hide_show_panels.js"></script>
     
     <script src="js/PaintSurface_evenets.js"></script>
     

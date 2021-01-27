@@ -152,7 +152,12 @@ ctx.stroke();
 
 function set_theme_mode(){
     current_mode=localStorage.getItem('theme');
-    if(current_mode=='dark'){localStorage.setItem('theme','light');changeTheme();return;}
+    if(current_mode=='dark')
+    {
+        localStorage.setItem('theme','light');
+        changeTheme();
+        return;
+    }
     localStorage.setItem('theme','dark');
     changeTheme();
 }
