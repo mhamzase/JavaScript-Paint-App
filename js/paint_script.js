@@ -247,10 +247,6 @@ $(function () {
   })
 //end
 
-function test(){
-    alert("hi");
-}
-
 
 function draw_painting(event){
     let x=event.clientX;
