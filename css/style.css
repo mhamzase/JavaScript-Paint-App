@@ -179,3 +179,7 @@ input[type="color"]:hover{
 #view-toolbar-dropdown:hover , #view-colorbar-dropdown:hover{
       cursor: pointer;
 }
+
+#developers_item:hover{
+      cursor: pointer;
+}

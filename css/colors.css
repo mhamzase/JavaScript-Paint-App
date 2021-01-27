@@ -58,10 +58,6 @@
     cursor:pointer;
     transition:  1s;
 }
-.col-sm-1:hover{
-    opacity:1;
-    box-shadow:5px 5px 5px 5px back;
-}
 .pickcolor1{
     background-color:#be0000;
 }
