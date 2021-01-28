@@ -132,21 +132,6 @@ var ctx = canvas.getContext("2d");
 ctx.fillStyle = 'white';
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-ctx.fillStyle="black";
-ctx.fillRect(200,20,400,200);
-ctx.fillStyle="rgba(100,200,0,1)";
-ctx.fillRect(500,300,100,150);
-
-ctx.fillStyle="rgba(100,200,20,0.8)";
-ctx.fillRect(30,30,100,400);
-ctx.moveTo(100,50);
-ctx.strokeStyle="rgba(100,200,20,0.8)";
-ctx.lineTo(200,100);
-ctx.stroke();
-//end code
-
-
-
 function set_theme_mode(){
     current_mode=localStorage.getItem('theme');
     if(current_mode=='dark')

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<style>
+#paintcanvas{
+	border:1px solid black;
+    
+}
+</style>
+<body>
+<canvas id="paintcanvas" width=700 height=700 ></canvas>
+
+</body>
+</html>
+<script>
+    var canvas=document.querySelector("#paintcanvas");
+    canvas.width=window.innerWidth;
+    canvas.height=window.innerHeight;
+    let paint_field=canvas.getContext("2d");
+    var painting=false;
+    var canvas_offset=canvas.getOffset;
+    var rect = canvas.getBoundingClientRect();
+    var coords={
+        X:0,
+        Y:0
+    }
+    function get_exat_position(client_X,client_Y){
+        coords.X=client_X-rect.left;
+        coords.Y=client_Y-rect.top;
+        
+    }
+    
+    function start_painting(event){
+        painting=true;
+        get_exat_position(event.clientX,event.clientY);
+    }
+    function stop_painting(){
+        painting=false;
+    }
+    function draw_painting(event){
+        if(!painting)return;
+        /*paint_field.lineWidth=5;
+        paint_field.beginPath();
+        paint_field.moveTo(coords.X,coords.Y);
+        get_exat_position(event.clientX,event.clientY);
+        paint_field.lineTo(coords.X,coords.Y);
+        paint_field.stroke();
+        */
+        console.log(coords.X,coords.Y);
+        paint_field.strokeRect(coords.X,coords.Y,event.clientX,event.clientY);
+        paint_field.stroke();
+    }   
+    canvas.addEventListener('mousedown',start_painting);
+    canvas.addEventListener('mouseup',stop_painting);
+    canvas.addEventListener('mousemove',draw_painting);
+
+</script>
